@@ -1,0 +1,37 @@
+Steps I did:
+- Checkedout at tags/v5.8-rc1
+- Ran the commands as shown below and checked the commiters online on \
+  https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?h=v5.8-rc1&id=
+- where id = commit hash
+-git show <commit-hash> | perl scripts/get_maintainer.pl --separator $'\n' --nokeywords --nogit --nogit-fallback --norolestats --nol
+
+
+###### Results I got #########
+
+1. 86b9366
+- Script Output: 
+  Trond Myklebust <trond.myklebust@hammerspace.com>
+  Anna Schumaker <anna.schumaker@netapp.com>
+- Upstream Commiters:
+  Colin Ian King <colin.king@canonical.com>
+  Anna Schumaker <Anna.Schumaker@Netapp.com>
+
+2. 01f76386b0 
+- Script Output :
+  Paul Walmsley <paul.walmsley@sifive.com>
+  Palmer Dabbelt <palmer@dabbelt.com>
+  Albert Ou <aou@eecs.berkeley.edu>
+- Upstream Commiters:
+  Vincent Chen <vincent.chen@sifive.com>
+  Palmer Dabbelt <palmerdabbelt@google.com>
+
+3. 934e36ec5e81b8b 
+- Script Output :
+  "David S. Miller" <davem@davemloft.net>
+  Jakub Kicinski <kuba@kernel.org>
+  Jonathan Corbet <corbet@lwn.net>
+- Upstream Commiters:
+  Signed-off-by: Jakub Kicinski <kuba@kernel.org>
+  Acked-by: Vladimir Oltean <vladimir.oltean@nxp.com>
+  Signed-off-by: David S. Miller <davem@davemloft.net>
+
